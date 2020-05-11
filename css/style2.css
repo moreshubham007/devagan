@@ -1,0 +1,275 @@
+.edit-cover:link {
+  position: relative;
+  background-color: #8923d6;
+  color: #ffffff;
+  border: none;
+  padding: 5px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.edit-cover:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: #511280;
+}
+.edit-cover:active {
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: #7721b8;
+}
+.edit-cover:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: #7721b8;
+}
+#cover-bg {
+  position: absolute;
+  padding: 0%;
+  margin: 0px;
+  z-index: 1;
+  /* border: 2px solid red; */
+  width: 90px;
+  opacity: 0;
+}
+.change-bg {
+  width: 94px;
+  height: 29px;
+  position: absolute;
+  right: 56px;
+  bottom: 57px;
+  z-index: 10;
+}
+.change-bg:hover {
+  cursor: pointer;
+}
+
+.upload-profile-pic {
+  /* border: 2px solid red; */
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  bottom: 103px;
+}
+/* add friend button padding and position related formatting */
+.add-friend:link {
+
+  background: #8923d6 !important;
+  padding: 10px 21px;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #fff !important;
+  position: relative;
+  /* top: 7px; */
+  font-weight: 600;
+  outline: none;
+  border-radius: 30px;
+  margin: 0px 6px;
+  text-decoration: none !important;
+
+}
+.add-friend:hover{
+  text-decoration: none !important;
+  color: #fff;
+  background: #6910ba !important;
+  /* transition: all 1s; */
+}
+.add-friend:visited{
+  text-decoration: none !important;
+  color:#fff !important;
+  background: #8923d6 !important;
+}
+.add-friend:active{
+  text-decoration: none;
+  color: #fff !important;
+  background: #6910ba !important;
+}
+
+/* POST,UPDATE,DELETE button style */
+.btn-style{
+  border: 1.19px solid #8923d6;
+  background-image: linear-gradient(#eee, #ffffff);
+  padding: 0px 12px;
+  margin: 5px 1px;
+  margin-left: 9px;
+  color: #6d6e71;
+  border-radius: 5px;
+}
+
+.btn-style:hover{
+  color: #8923d6;
+}
+
+.btn-style:focus{
+  outline: none !important;
+}
+/* ********************************************************** */
+.add-remove-friend{
+  border: 1.19px solid #8923d6;
+  background-image: linear-gradient(#eee, #fff);
+  padding: 3px 12px;
+  margin: 15px 0px;
+  color: #6d6e71;
+  position: relative;
+  left: 20px;
+  border-radius: 5px;
+}
+
+.add-remove-friend:focus{
+  outline: none !important;
+}
+
+/* basic info upload profile and cover pics */
+.upload-profile-pic-container{
+  /* border: 2px solid red; */
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin: 0px 2px;
+}
+
+input[name='upload-profile-p']{
+  /* border: 2px solid blue; */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 80px;
+  margin: 4px;
+  z-index: -1;
+} 
+
+.upload-background-pic-container{
+  /* border: 2px solid red; */
+  position: relative;
+  display: inline-block;
+  width: 108px;
+  margin: 0px 2px;
+}
+
+input[name='upload-bg-cov']{
+  /* border: 2px solid blue; */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100px;
+  margin: 4px;
+  z-index: -1;
+}
+
+.pro-btn{
+  font-size: 16px;
+  padding: 2px 20px;
+}
+
+/* *********************************************************************************** */
+/***************************** RESPONSIVE SCREEN  **************************************/
+/* ********************************************************************************** */
+@media screen and (max-width: 1000px) {
+  .upload-profile-pic {
+    left: 168px;
+    bottom: 101px;
+  }
+  .change-bg {
+    right: 54px;
+    top: -31px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .upload-profile-pic {
+    left: 153px;
+    bottom: 160px;
+  }
+
+  .change-bg {
+    right: 4px;
+    top: 171px;
+  }
+
+  img[id='imgFileUpload']{
+    position: relative;
+    right: -54px;
+    }
+}
+@media screen and (max-width: 400px) {
+  .upload-profile-pic {
+    left: 157px;
+    bottom: 97px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -216px;
+  }
+
+  button[name='submit']{
+    position: relative;
+    left: 7px;
+  }
+  img[id='imgFileUpload']{
+    position: relative;
+    right: -54px;
+    }
+  }
+@media screen and (max-width: 268px) {
+  .upload-profile-pic {
+    left: 163px;
+    bottom: 127px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -188px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .upload-profile-pic {
+    left: 145px;
+    bottom: 155px;
+  }
+
+  .change-bg {
+    right: 2px;
+    top: -153px;
+  }
+  img[id='imgFileUpload']{
+    position: relative;
+    right: -54px;
+    }
+}
+@media screen and (max-width: 260px) {
+  .upload-profile-pic {
+    left: 163px;
+    bottom: 125px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -191px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .upload-profile-pic {
+    left: 143px;
+    bottom: 154px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -152px;
+  }
+
+}
+@media screen and (max-width: 270px) {
+  .upload-profile-pic {
+    left: 144px;
+    bottom: 185px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -122px;
+  }
+}
+
