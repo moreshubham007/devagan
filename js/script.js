@@ -136,76 +136,54 @@ $(window).on('resize', function() {
 });
 
 // Fuction for map initialization
-function initMap() {
-  var uluru = {
-    lat: 12.927923,
-    lng: 77.627108
-  };
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: uluru,
-    zoomControl: true,
-    scaleControl: false,
-    scrollwheel: false,
-    disableDoubleClickZoom: true
-  });
+// function initMap() {
+//   var uluru = {
+//     lat: 12.927923,
+//     lng: 77.627108
+//   };
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 15,
+//     center: uluru,
+//     zoomControl: true,
+//     scaleControl: false,
+//     scrollwheel: false,
+//     disableDoubleClickZoom: true
+//   });
 
-  var marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-}
+//   var marker = new google.maps.Marker({
+//     position: uluru,
+//     map: map
+//   });
+// }
 
-function myFunction() {
-  var x = document.getElementById('poll_status');
-  if (x.innerHTML === 'Unlock') {
-    x.innerHTML = 'Locked';
-    x.style.color = 'rgb(181, 1, 1)';
-  } else {
-    x.innerHTML = 'Unlock';
-    x.style.color = 'green';
-  }
-}
 // $(".create-poll").click(function () {
 //     $(this).text("Hide");
 
 //     $(".answers").slideToggle();
 
 // });
-$(function() {
-  $('.create-poll').click(function() {
-    $(this).text(function(i, text) {
-      return text === 'Create' ? 'Hide' : 'Create';
-    });
-    $('.answers').slideToggle();
-  });
-  $('.create-poll').click();
-});
-var count = 0;
-$('.add-options').click(function() {
-  count += 1;
-  $('.poll-items').append(
-    '<li><input type="text" class="option" placeholder="Write Something Here"></li>'
-  );
-  console.log(count + ': on plus');
-  $('.opt-col').css('height', '+=41px');
-  if (count === 1) {
-    $('.delete-options').css('display', 'inline-block');
-  }
-  if (count === 3) {
-    $('.add-options').css('display', 'none');
-  }
-});
-$('.delete-options').on('click', function() {
-  $('.opt-col').css('height', '-=41px');
-  count -= 1;
-  console.log(count + ': on minus');
-});
+//***********DO NOT TOUCH THIS************** */
+// var count = 0;
+// $('.add-options').click(function() {
+//   count += 1;
+//   $('.poll-items').append(
+//     '<li><input type="text" class="option" placeholder="Write Something Here"></li>'
+//   );
+//   console.log(count + ': on plus');
+//   $('.opt-col').css('height', '+=41px');
+//   if (count === 1) {
+//     $('.delete-options').css('display', 'inline-block');
+//   }
+//   if (count === 3) {
+//     $('.add-options').css('display', 'none');
+//   }
+// });
+// $('.delete-options').on('click', function() {
+//   $('.opt-col').css('height', '-=41px');
+//   count -= 1;
+//   console.log(count + ': on minus');
+// });
+// **********************************************
+
 
 // delete button event
-$('.delete-poll-button').click(function() {
-  $('#delete-poll-pop').slideToggle();
-});
-$('.pop-no').click(function() {
-  $('#delete-poll-pop').slideToggle();
-});

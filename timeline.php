@@ -152,7 +152,7 @@
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="poll.html">Poll</a></li>
+              <li class="dropdown"><a href="poll.php">Poll</a></li>
               <li class="dropdown"><a href="contact.html">Contact</a></li>
               <li class="dropdown"><a href="">Update Profile</a></li>
               <li class="dropdown"><a href="php/index/logout.php">Logout</a></li>

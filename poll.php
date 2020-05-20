@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="css/ionicons.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link href="css/emoji.css" rel="stylesheet" />
-
+    
     <!--Google Font-->
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i"
       rel="stylesheet"
     />
+    <!-- Icons -->
     <link
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -388,6 +389,7 @@
                     <label for="radio-option3">C</label>
                   </div>
                   <p>&nbsp;</p>
+                  <div class="delete-poll-bg"> </div>
                   <div id="delete-poll-pop">
                     Are you sure that you want to delete this poll ?
                     <div class="dd">
@@ -819,15 +821,16 @@
 
     <!-- Scripts
     ================================================= -->
-    <script
+    <!-- <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTMXfmDn0VlqWIyoOxK8997L-amWbUPiQ&callback=initMap"
-    ></script>
+    ></script> -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky-kit.min.js"></script>
     <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/poll.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
