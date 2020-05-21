@@ -10,39 +10,59 @@ function myFunction() {
     }
   }
 
-// Create Poll button event
-$(function() {
-    $('.create-poll').click(function() {
-      $(this).text(function(i, text) {
-        return text === 'Create' ? 'Hide' : 'Create';
-      });
-      $('.answers').slideToggle();
-    });
-    $('.create-poll').click();
-  });
+// Add Button
+function addOpt()
+{
+  document.getElementById('addOpt').style.display='none';
+  document.getElementById('hideOpt').style.display='block';
+  document.getElementById('dispOpt').style.display='block';
+}
 
-// Delete poll button
-$('.delete-poll-button').click(function() {
-  $('#delete-poll-pop').slideToggle();
-  $('.delete-poll-bg').show();
-//   var isVisible = $('.delete-poll-bg').show();
+// Hide Button
+function hideOpt()
+{
+  document.getElementById('addOpt').style.display='block';
+  document.getElementById('hideOpt').style.display='none';
+  document.getElementById('dispOpt').style.display='none';
 
+}
 
-const elemento = document.querySelector('.delete-poll-bg')
-var isVisible = document.getComputedStyle(elemento);
+// Add Option box or remove
+function addopt(opt)
+{
+document.getElementById(opt).style.display='block';
+if(opt=="opt3")
+{
+  document.getElementById('opt2add').style.display='none';
+}
+if(opt=="opt4")
+{
+  document.getElementById('opt3add').style.display='none';
+  document.getElementById('opt3rem').style.display='none';
+}
+if(opt=="opt5")
+{
+  document.getElementById('opt4add').style.display='none';
+  document.getElementById('opt4rem').style.display='none';
+}
+}
 
-//   if(isVisible.style.display)
+function delopt(opt)
+{
+document.getElementById(opt).style.display='none';
+if(opt=="opt3")
+{
+  document.getElementById('opt2add').style.display='block';
+}
+if(opt=="opt4")
+{
+  document.getElementById('opt3add').style.display='block';
+  document.getElementById('opt3rem').style.display='block';
+}
+if(opt=="opt5")
+{
+  document.getElementById('opt4add').style.display='block';
+  document.getElementById('opt4rem').style.display='block';
+}
 
-//   if(isVisible == show()){
-//     $('.delete-poll-bg').hide();
-//   }
-//   else{
-//     $('.delete-poll-bg').show();
-//   }
-
-});
-// if select not to delete
-$('.pop-no').click(function() {
-  $('#delete-poll-pop').slideToggle();
-  $('.delete-poll-bg').hide();
-});
+}
