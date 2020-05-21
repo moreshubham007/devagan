@@ -304,32 +304,67 @@
                 <div class="col-width col-sm-5">
                   <div class="tools">
                     <button
-                      class="btn btn-primary pull-right publish-poll"
+                      class="btn btn-primary publish-poll"
                       title="publish your poll"
                     >
                       Publish
                     </button>
                     <button
+                      id="addOpt"
+                      onclick="addOpt()"
+                      class="btn btn-primary pull-right create-poll"
+                      title="create options for your poll"
+                    >
+                      Add 
+                    </button>
+                    <button
+                      id="hideOpt"
+                      onclick="hideOpt()"
+                      style="display: none;"
                       class="btn btn-primary pull-right create-poll"
                       title="create options for your poll"
                     >
                       Hide
                     </button>
+
                   </div>
                 </div>
-                <div class="answers opt-col">
-                  <div class="poll-options">
-                    <ol class="poll-items">
-                      <li>
+                <div id="dispOpt" style="display: none;" class="answers opt-col">
+                  <!-- <div class="poll-options"> -->
+                    <!-- <ol class="poll-items"> -->
+                      <li>A 
                         <input type="text" class="option" placeholder="Write Something Here" />
                       </li>
-                      <li>
-                        <input type="text" class="option" placeholder="Write Something Here" />
+
+                      <li id="opt2">B
+                        <input type="text" class="option" placeholder="Write Something Here" /> 
+                        <button class="pull-right" id="opt2add" onclick="addopt('opt3')">+</button>
                       </li>
-                    </ol>
-                    <span class="add-options"><i class="fa fa-plus"></i></span>
-                    <span class="delete-options"><i class="fa fa-minus"></i></span>
-                  </div>
+
+                      <div id="opt3" style="display: none;">
+                      <li>C
+                        <input type="text" class="option" placeholder="Write Something Here" /> 
+                        <button class="pull-right" id="opt3rem" onclick="delopt('opt3')">-</button> 
+                        <button class="pull-right" id="opt3add" onclick="addopt('opt4')">+</button>
+                      </li>
+                      </div>
+
+                      <div id="opt4" style="display: none;">
+                      <li>D
+                        <input type="text" class="option" placeholder="Write Something Here" /> 
+                        <button class="pull-right" id="opt4rem" onclick="delopt('opt4')">-</button> 
+                        <button class="pull-right" id="opt4add" onclick="addopt('opt5')">+</button>
+                      </li>
+                      </div>
+
+                      <div id="opt5" style="display: none;">
+                      <li>E
+                        <input type="text" class="option" placeholder="Write Something Here" /> 
+                        <button id="opt4rem" onclick="delopt('opt5')">-</button>
+                      </li>
+                      </div>
+                    <!-- </ol> -->
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
