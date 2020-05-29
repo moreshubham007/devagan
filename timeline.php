@@ -101,6 +101,8 @@
                   <li><a href="newsfeed-messages.php">Chatroom</a></li>
                   <li><a href="newsfeed-images.html">Images</a></li>
                   <li><a href="newsfeed-videos.html">Videos</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+
                 </ul>
               </li>
               <li class="dropdown">
@@ -152,8 +154,26 @@
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </li>
+
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle pages"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Group <span><img src="images/down-arrow.png" alt=""/></span
+                ></a>
+                <ul class="dropdown-menu page-list">
+                  <!-- other group: which are made by the user or which user is admin of group -->
+                  <li><a href="#">other group name</a></li>
+                  <li><a href="create-group.html">Create Group</a></li>
+                </ul>
+              </li>
+
               <li class="dropdown"><a href="poll.php">Poll</a></li>
-              <li class="dropdown"><a href="contact.html">Contact</a></li>
+              <!-- <li class="dropdown"><a href="contact.html">Contact</a></li> -->
               <li class="dropdown"><a href="">Update Profile</a></li>
               <li class="dropdown"><a href="php/index/logout.php">Logout</a></li>
             </ul>

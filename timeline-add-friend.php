@@ -143,7 +143,7 @@
                 </ul>
               </li>
               <li class="dropdown"><a href="poll.html">Poll</a></li>
-              <li class="dropdown"><a href="contact.html">Contact</a></li>
+              <!-- <li class="dropdown"><a href="contact.html">Contact</a></li> -->
               <li class="dropdown"><a href="php/index/logout.php">Logout</a></li>
             </ul>
             <form class="navbar-form navbar-right hidden-sm">

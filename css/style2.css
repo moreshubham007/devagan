@@ -162,6 +162,58 @@ input[name='upload-bg-cov']{
   font-size: 16px;
   padding: 2px 20px;
 }
+/* ******************************* Group Page ******************************************* */
+.containerr{
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+  background: linear-gradient(to right, rgba(0, 0, 1, 0.75), rgba(0, 0, 1, 0.75)),
+  url('https://devagan.in/images/cover.jpg') fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  
+}
+
+.info-container{
+  /* border: 2px solid red; */
+  display: inline-block;
+  height: 330px;
+  width: 979px;
+  position: absolute;
+  top: 158px;
+  margin-left: 197px;
+}
+
+.back-icon{
+  color: #fff !important;
+  margin-top: 10px;
+  position: absolute;
+  top: 30px;
+  left: 58px;
+  font-size: 40px;
+  z-index: 2;
+}
+.back-icon:hover{
+  color:#fff !important; 
+  z-index: 2;
+}
+.back-icon:visited{
+  color: #fff !important; 
+  z-index: 2;
+}
+
+
+.space{
+  width: 100%;
+  border: 2px solid;
+  height: 10px;
+  opacity: 0;
+}
+/* *************************************************************************************** */
+
+
 
 /* *********************************************************************************** */
 /***************************** RESPONSIVE SCREEN  **************************************/
