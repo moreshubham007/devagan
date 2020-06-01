@@ -26,7 +26,7 @@
     <!-- Header
     ================================================= -->
 
-    <span class= 'back-icon' title='back to page' onclick="goBack();">
+    <span class= 'back-icon' title='back to page' onclick="goBack()">
       <i class="fa fa-arrow-circle-left"></i>
     </span>
     <!--Header End-->
@@ -46,56 +46,38 @@
             </div>
           </div>
           <div class="col-sm-6 col-sm-offset-1">
-            <div class="reg-form-container" style="min-height: 510px;"> 
+            <div class="reg-form-container Invite-frnd-form" style="min-height: 510px;"> 
             
               <!-- Register/Login Tabs-->
               
               <!--Registration Form Contents-->
               <div class="tab-content">
                 <div class="tab-pane active" id="register">
-                  <h3>Create Group</h3>
-                  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  
-                  <!--Register Form-->
+                  <h3 style="margin-top: 10px;">Invite your friends</h3>
+                <div class="line"></div>
+
                   <form action="#" method="POST" name="registration_form" id='registration_form' class="form-inline" autocomplete="off">
-                    <div class="row">
-                      <div class="form-group col-xs-12">
-                        <label for="group-name" class="sr-only">Group Name</label>
-                        <input id="group" class="form-control input-group-lg" type="text" name="email" title="Enter Name" placeholder="Your Group Name*" minlength="6" maxlength="20" / required>
-                      </div>
-                    </div>
-                    <div class="space"></div>
-                    <div class="row">
-                      <div class="form-group col-xs-12">
-                        <label for="group-Bio" class="sr-only">Group Bio</label>
-                        <textarea id="Bio" class="form-control input-group-lg" name="bio" rows="2" cols="20" maxlength="100"  placeholder='write your group bio*' required></textarea>
-                      </div>
-                    </div>
+                    <div class="friend-list-container">
 
-                    <div class="space"></div>
-                    <div class="row">
-                      <div class="form-group col-xs-12">
-                        <label for="email" class="sr-only">Email</label>
-                        <input id="email" class="form-control input-group-lg" type="text" name="email" title="your email" placeholder="user@gmail.com    (User Mail for Read-only)" disabled / required>
-                      </div>
-                    </div>
+                        <div class="friends-list">
+                            <div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEJKgKgO6N3u-UzrY8_LKL4MX0qQw8DX_nYuMK9I3HnW6xz2dB&usqp=CAU" alt="profile" width="45px" margin-left='9px' border='2px solid red' class="friend-profile-pic">
+                                <span class="friend-name"><a href="#">Handy Manny</a></span>
+                            </div>
+                            <button class="btn-style invite-frnd">Invite</button>
+                        </div>
 
-                    <div class="space"></div>
-                    <div class="row">
-                      <div class="form-group col-xs-12">
-                        <label for="group-name" class="sr-only">Page Niche</label>
-                        <input id="group" class="form-control input-group-lg" type="text" name="page-niche" title="Enter page type" placeholder="Page Niche*: Artist, Blogger, Organisation etc..."/ required>
+                        <div class="friends-list">
+                          <div>
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTEJKgKgO6N3u-UzrY8_LKL4MX0qQw8DX_nYuMK9I3HnW6xz2dB&usqp=CAU" alt="profile" width="45px" margin-left='9px' border='2px solid red' class="friend-profile-pic">
+                              <span class="friend-name"><a href="#">Handy Manny</a></span>
+                          </div>
+                          <button class="btn-style invite-frnd">Invite</button>
                       </div>
-                    </div>                    
-                    </div>
-                    <div>
-                      <button name="register" class="btn btn-primary move-next" style="
-                      position: absolute;
-                      bottom: 25px;
-                      right: 10px" onclick="gothere();">
-                      Next >> </button>
                     </div>
                   </form><!--Register Now Form Ends-->
+                  <button name="register" class="btn btn-primary btn-make-group">
+                  Create Group  </button>
                 </div><!--Registration Form Contents Ends-->
               </div>
             </div>
@@ -108,12 +90,11 @@
         </div>
       </div>
     </div>
-
-    <!--preloader-->
+    
+    <!-- preloader -->
     <div id="spinner-wrapper">
       <div class="spinner"></div>
     </div>
-
     <!-- Scripts
     ================================================= -->
     <script src="js/jquery-3.1.1.min.js"></script>

@@ -1,3 +1,13 @@
+::-webkit-scrollbar{
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #d6d5d5b1;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
 .edit-cover:link {
   position: relative;
   background-color: #8923d6;
@@ -194,13 +204,11 @@ input[name='upload-bg-cov']{
   left: 58px;
   font-size: 40px;
   z-index: 2;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 .back-icon:hover{
-  color:#fff !important; 
-  z-index: 2;
-}
-.back-icon:visited{
-  color: #fff !important; 
+  color:#c988fa !important; 
   z-index: 2;
 }
 
@@ -211,6 +219,372 @@ input[name='upload-bg-cov']{
   height: 10px;
   opacity: 0;
 }
+.Invite-frnd-form{
+  padding: 8px 15px !important;
+  padding-bottom: 50px !important;
+}
+
+.friend-list-container{
+  padding: 2px;
+  height: 394px;
+  border-radius: 10px;
+  overflow-y: auto;
+  position: relative;
+  width: 105%;
+  margin-left: -15px;
+  /* border: 2px solid red;*/
+}
+.friends-list{
+  position: relative;
+  height: 57px;
+  border: 1.1px solid #8923d6;
+  margin-top: 1px;
+  border-radius: 10px;
+  margin: 8px 5px;
+
+}
+
+.friend-profile-pic{
+  border-radius: 10px;
+  margin: 5px;
+  float: left;
+}
+.friend-name{
+  display: inline-block !important;
+  font-size: 18px;
+  position: relative;
+  left: 10px;
+  top: 13px;
+}
+.friend-name a{
+  color: #9127e1 !important;
+}
+.friend-bio{
+  display: block;
+  margin: -6px 70px 0px 62px;
+}
+.invite-frnd{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.btn-make-group{
+  position: absolute;
+  /* border: 2px solid red; */
+  bottom: 10px;
+  right: 8px;
+}
+
+.people-admin-tab ul{
+  border: 2px solid #eee;
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  /* background-image: linear-gradient(#eee); */
+  background-color: #eee;
+  margin: 0px;
+}
+
+.people-admin:first-child{
+  margin-left: 5px;
+  padding:1px 20px;
+}
+
+.people-admin{
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+  line-height: 30px;
+  padding:1px 20px;
+  /* background-image: linear-gradient(#eee, #ffffff); */
+  color: #6d6e71 !important;
+  font-size: 16px;
+}
+.people-admin:hover{
+  color: #8923d6 !important;
+}
+
+.people-admin a{
+  text-decoration: none;
+  color: #6d6e71 !important;
+
+}
+/* .people-admin a:hover{
+  color: #8923d6;
+} */
+.people-admin a:visited{
+  color: #6d6e71 !important;
+}
+
+.activated{
+  /* border: 2px solid red; */
+  background-color: #fff;
+}
+
+.members-name{
+  display: inline-block !important;
+  font-size: 18px;
+  position: relative;
+  left: 10px;
+  top: 13px;
+}
+.members-name a{
+  color: #9127e1 !important;
+}
+
+.members-list{
+  position: relative;
+  height: 57px;
+  border: 1.1px solid #8923d6;
+  margin-top: 1px;
+  border-radius: 10px;
+  margin: 0px 5px;
+}
+
+.admin-frnd{
+  display: inline-block;
+  color: #018501;
+  font-size: 15px;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
+.radio-options-container{
+  background-color: #eee;
+  height: 120px;
+  border-radius: 20px;
+}
+
+.radio-options-container div{
+  /* border: 2px solid red; */
+  display: inline-block;
+  /* padding: 4px 10px; */
+  margin: 10px 15px;
+  font-size: 14px;
+}
+
+.group-security-headings{
+  color: #6d6e71 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+.group-security-heading{
+  margin-bottom: 10px;
+  font-size: 13.5px;
+}
+
+.delete-page-container{
+  box-shadow: 0px 0px 5px 0px red;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.delete-group-btn{
+  border: none;
+  color: #fff;
+  background: #f05252;
+  padding: 2px 14px;
+  border-radius: 20px;
+  position: absolute;
+  right: 0px;
+  bottom: 8px;
+  margin-right: 20px;
+}
+
+.delete-group-btn:focus{
+  outline: none;
+}
+
+.delete-page-pop-up-container{
+  /* box-shadow: 0px 0px 5px 0px red; */
+  border: 1.5px solid red;
+  display: inline-block;
+  padding: 10px 10px;
+  background: #fff;
+  position: absolute;
+  right: 0px;
+  bottom: 135px;
+  border-radius: 15px;
+  display: none;
+  z-index: 5;
+}
+.delete-page-pop-up-container::after{
+  content: '';
+  position: absolute;
+  right: 43px;
+  bottom: -8px;
+  width: 15px;
+  height: 15px;
+  /* box-shadow: 0px 0px 5px 0px red; */
+  border: 1.5px solid red;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(-46deg);
+  background: #fff;
+}
+.delete-page-pop-up-message{
+  padding: 2px;
+  font-size: 15px;
+  margin: 2px 0px;
+}
+
+.delete-page-btn-container{
+  /* border: 2px solid red; */
+  display: inline-block;
+  position: relative;
+  left: 110px;
+  padding: 0px;
+}
+
+.delete-page-btn{
+  text-decoration: none !important;
+  color: #6d6e71;
+  border: 1.19px solid #8923d6;
+  background-image: linear-gradient(#eee, #ffffff);
+  padding: 4px 20px;
+  margin: 0px 4px;
+  border-radius: 16px;
+}
+
+.delete-page-btn:hover{
+  text-decoration: none;
+}
+
+.delete-page-btn:visited{
+  text-decoration: none;
+  color: #8923d6;;
+}
+
+.delete-page-disable-bg{
+  /* background: red; */
+  backdrop-filter: blur(2px);
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 500px;
+  z-index: 0;
+  display: none;
+}
+
+.delete-page-pop-up-container2{
+  /* box-shadow: 0px 0px 5px 0px red; */
+  border: 1.5px solid red;
+  display: inline-block;
+  padding: 10px 10px;
+  background: #fff;
+  position: absolute;
+  right: 0px;
+  bottom: 135px;
+  border-radius: 15px;
+  height: 160px;
+  display: none;
+  z-index: 5;
+}
+.delete-page-pop-up-container2::after{
+  content: '';
+  position: absolute;
+  right: 43px;
+  bottom: -8px;
+  width: 15px;
+  height: 15px;
+  /* box-shadow: 0px 0px 5px 0px red; */
+  border: 1.5px solid red;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(-46deg);
+  background: #fff;
+}
+
+.delete-page-close-icon{
+  position: relative;
+  padding: 4px;
+  left: 355px;
+  cursor: pointer;
+}
+
+.pswd-contanr{
+  margin: 5px 8px;
+}
+.pswd-contanr input{
+  padding: 2px 2px;
+  margin-bottom: 5px;
+}
+.pswd-contanr input:focus{
+  outline: none;
+  padding: 5px 5px;
+  border: none;
+  transition: 0.5s;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px 0px red;
+
+}
+
+
+.delete-page-btn-container2{
+  /* border: 2px solid red; */
+  position: relative;
+}
+.delete-option-permanently{
+  margin-left: 10px;
+  top: 3px;
+  padding: 8px 10px;
+  position: relative;
+}
+
+/* radio button for group security page */
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ad60e7;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
 /* *************************************************************************************** */
 
 
@@ -218,6 +592,8 @@ input[name='upload-bg-cov']{
 /* *********************************************************************************** */
 /***************************** RESPONSIVE SCREEN  **************************************/
 /* ********************************************************************************** */
+
+
 @media screen and (max-width: 1000px) {
   .upload-profile-pic {
     left: 168px;
@@ -243,7 +619,72 @@ input[name='upload-bg-cov']{
     position: relative;
     right: -54px;
     }
+  
+  .back-icon{
+    left: 20px;
+  }
 }
+
+@media screen and (max-width: 768px){
+  .friend-name{
+    left: -73px;
+  }
+  .friend-profile-pic{
+    margin-left: 9px;
+  }
+  .delete-page-pop-up-container{
+    /* border: 2px solid blue; */
+    bottom: 100px;
+    right: 11px;
+  }
+  .delete-page-pop-up-container2{
+    bottom: 97px;
+    right: 8px;
+  }
+  .delete-group-btn{
+    right: -10px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .upload-profile-pic {
+    left: 145px;
+    bottom: 155px;
+  }
+
+  .change-bg {
+    right: 2px;
+    top: -153px;
+  }
+  img[id='imgFileUpload']{
+    position: relative;
+    right: -54px;
+    }
+  
+  .back-icon{
+    left: 20px;
+  }
+
+  .friend-name{
+    left: -83px;
+  }
+  .friend-profile-pic{
+    margin-left: 9px;
+  }
+  .delete-page-pop-up-container{
+    /* border: 2px solid blue; */
+    bottom: 100px;
+    right: 11px;
+  }
+  .delete-page-pop-up-container2{
+    bottom: 97px;
+    right: 8px;
+  }
+  .delete-group-btn{
+    right: -10px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .upload-profile-pic {
     left: 157px;
@@ -263,7 +704,138 @@ input[name='upload-bg-cov']{
     position: relative;
     right: -54px;
     }
+
+  .friend-name{
+    left: -50px;
+    font-size: 17px;
   }
+  .friend-profile-pic{
+    margin-left: 9px;
+    margin-right: 2px;
+  }
+
+  }
+  
+
+@media screen and (max-width: 375px)
+{
+  .friend-name{
+    left: -70px;
+  }
+  .delete-group-btn{
+    bottom: 55px;
+  }
+  .delete-page-pop-up-container{
+    right: 10px;
+    bottom: 145px;
+  }
+  .delete-page-pop-up-container2{
+    /* border: 2px solid blue; */
+    /* border: 2px solid blue; */
+    height: 160px;
+    bottom: 150px;
+    right: 2px;
+    left: 13px;de
+  }
+  .delete-page-close-icon{
+    position: absolute;
+    left: 335px;
+    top: 6px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .upload-profile-pic {
+    left: 143px;
+    bottom: 154px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -152px;
+  }
+  .back-icon{
+    left: 20px;
+  }
+  .friend-name{
+    left: -63px;
+    font-size: 17px;
+  }
+  .delete-group-btn{
+    bottom: 55px;
+  }
+  .delete-page-pop-up-container{
+    right: 5px;
+    bottom: 146px;
+  }
+  .delete-page-pop-up-container2{
+    /* border: 2px solid blue; */
+    /* border: 2px solid blue; */
+    height: 160px;
+  }
+  .delete-page-close-icon{
+    position: absolute;
+    left: 335px;
+    top: 6px;
+  }
+
+}
+
+@media screen and (max-width: 320px)
+{
+  .friend-name{
+    left: -46px;
+    font-size: 16px;
+  }
+  .members-name{
+    font-size: 17px;
+  }
+  .delete-group-btn{
+    bottom: 78px;
+  }
+  .delete-page-pop-up-container{
+    bottom: 168px;
+  }
+  .delete-page-pop-up-container2{
+    /* border: 2px solid blue; */
+    bottom: 170px;
+    right: 0px;
+  }
+  .delete-page-close-icon{
+    left: 282px;
+    top: 2px;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .upload-profile-pic {
+    left: 144px;
+    bottom: 185px;
+  }
+
+  .change-bg {
+    right: 0px;
+    top: -122px;
+  }
+  .friend-name{
+    left: -24px;
+    font-size: 13px;
+  }
+  .friend-profile-pic{
+    margin-left: 3px;
+    width: 37px;
+    position: relative;
+    top: 4px;
+    left: 0px;
+  }
+  .invite-frnd{
+    right: 2px;
+    font-size: 10px;
+    padding: 0px 6px;
+  }
+}
+
 @media screen and (max-width: 268px) {
   .upload-profile-pic {
     left: 163px;
@@ -275,21 +847,7 @@ input[name='upload-bg-cov']{
     top: -188px;
   }
 }
-@media screen and (max-width: 470px) {
-  .upload-profile-pic {
-    left: 145px;
-    bottom: 155px;
-  }
 
-  .change-bg {
-    right: 2px;
-    top: -153px;
-  }
-  img[id='imgFileUpload']{
-    position: relative;
-    right: -54px;
-    }
-}
 @media screen and (max-width: 260px) {
   .upload-profile-pic {
     left: 163px;
@@ -300,28 +858,20 @@ input[name='upload-bg-cov']{
     right: 0px;
     top: -191px;
   }
-}
-@media screen and (max-width: 360px) {
-  .upload-profile-pic {
-    left: 143px;
-    bottom: 154px;
+  .friend-name{
+    left: -24px;
+    font-size: 13px;
   }
-
-  .change-bg {
-    right: 0px;
-    top: -152px;
+  .friend-profile-pic{
+    margin-left: 3px;
+    width: 37px;
+    position: relative;
+    top: 4px;
+    left: 0px;
   }
-
-}
-@media screen and (max-width: 270px) {
-  .upload-profile-pic {
-    left: 144px;
-    bottom: 185px;
-  }
-
-  .change-bg {
-    right: 0px;
-    top: -122px;
+  .invite-frnd{
+    right: 2px;
+    font-size: 10px;
+    padding: 0px 6px;
   }
 }
-
