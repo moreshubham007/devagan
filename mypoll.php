@@ -395,9 +395,7 @@
 
             <!-- Post Content
             ================================================= -->
-            <?php foreach($userpollall as $upoll){ 
-              if($upoll['status']=="Available"){
-            ?>
+            <?php foreach($userpoll as $upoll){ ?>
             <div class="post-content">
               <div class="post-container">
                 <img
@@ -453,12 +451,45 @@
                     <?php reqpoll($upoll['sr']) ?>
 
                   </div>
+                    <?php if($upoll['status']=="Available"){ ?>
+                    <h4 id="pollOn<?php echo $upoll['sr']; ?>" style="color: #5c5c5c; display: block;" 
+                      >Poll is now 
+                      <span style="color: #00c42b;" >Available</span>
+                    </h4>
+                    <h4 id="pollOff<?php echo $upoll['sr']; ?>" style="color: #5c5c5c;  display: none;" 
+                      >Poll is 
+                      <span style="color: red;">Locked</span>
+                    </h4>
+                    <input id="pollEn<?php echo $upoll['sr']; ?>" onclick="pollEn(<?php echo $upoll['sr']; ?>)" type="checkbox" class="switch_1" checked>
+                  <?php 
+                  } 
+                  else{
+                  ?>
+                  <h4 id="pollOn<?php echo $upoll['sr']; ?>" style="color: #5c5c5c; display: none;" 
+                      >Poll is now 
+                      <span style="color: #00c42b;" >available</span>
+                    </h4>
+                    <h4 id="pollOff<?php echo $upoll['sr']; ?>" style="color: #5c5c5c;  display: block;" 
+                      >Poll is 
+                      <span style="color: red;">Locked</span>
+                    </h4>
+                    <input id="pollEn<?php echo $upoll['sr']; ?>" onclick="pollEn(<?php echo $upoll['sr']; ?>)" type="checkbox" class="switch_1">
+                  <?php } ?>
 
+                  <div id="poll_del<?php echo $upoll['sr']; ?>" class="poll-del">
+                    <div class="poll-del-content">
+                      <h4>Do you want to Delete this Poll ?<?php echo $upoll['sr']; ?></h4>
+                      <form method="POST"><button class="yes" name="poll_del" value="<?php echo $upoll['sr']; ?>">Yes</button></form>
+                      <button onclick="poll_cancle(<?php echo $upoll['sr']; ?>)" class="no">No</button>
+                    </div>
+                  </div>
+
+                  <i onclick="del_poll(<?php echo $upoll['sr']; ?>)" class="fa fa-trash" style="font-size: 30px; color: red; cursor: pointer; float: right;" aria-hidden="true"></i>
                   <!-- <p>&nbsp;</p> -->
                 </div>
               </div>
             </div>
-            <?php }} ?>
+            <?php } ?>
 
           </div>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2020 at 09:07 AM
+-- Generation Time: Jun 05, 2020 at 05:18 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -48,7 +48,10 @@ INSERT INTO `activity` (`sr`, `uid`, `act`, `actt`) VALUES
 (6, '2', 'Created a Post', 1588240043),
 (7, '2', 'Created a Post', 1588240129),
 (8, '2', 'Created a Post', 1588240192),
-(9, '2', 'Created a Post', 1588240270);
+(9, '2', 'Created a Post', 1588240270),
+(10, '2', 'Created a Post', 1588775066),
+(11, '2', 'Created a Post', 1588776149),
+(12, '2', 'Created a Post', 1590331046);
 
 -- --------------------------------------------------------
 
@@ -128,10 +131,71 @@ CREATE TABLE `followers` (
 --
 
 INSERT INTO `followers` (`sr`, `uid`, `request`, `approve`) VALUES
-(1, 1, 0, 2),
-(2, 2, 0, 1),
-(3, 2, 0, 3),
-(5, 3, 1, 0);
+(18, 2, 0, 1),
+(19, 1, 0, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `poll`
+--
+
+CREATE TABLE `poll` (
+  `sr` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `opta` text NOT NULL,
+  `optb` text NOT NULL,
+  `optc` text NOT NULL,
+  `optd` text NOT NULL,
+  `opte` text NOT NULL,
+  `status` text NOT NULL,
+  `date_time` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `poll`
+--
+
+INSERT INTO `poll` (`sr`, `uid`, `title`, `opta`, `optb`, `optc`, `optd`, `opte`, `status`, `date_time`) VALUES
+(14, 2, 'Whats your mood', 'Cool', 'Angry', 'Nutral', 'Happy', '', 'Available', '1591280551'),
+(16, 2, 'Today is ', 'Sunday', 'Monday', 'Tuesday', '', '', 'Available', '1591282426'),
+(17, 1, 'Whats up', 'fine', 'Good', '', '', '', 'Available', '1591357041'),
+(19, 2, 'Hii GUys', 'Nice to meet ', 'Your are weak', '', '', '', 'Available', '1591357563'),
+(20, 2, 'today is', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'Available', '1591367069'),
+(21, 2, 'Hii chone one options', 'one', '', '', '', '', 'Available', '1591368351'),
+(23, 2, 'Mood?', 'Good', 'Very Goood', '', '', '', 'Available', '1591369856');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `poll_result`
+--
+
+CREATE TABLE `poll_result` (
+  `sr` int(11) NOT NULL,
+  `psr` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `selected` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `poll_result`
+--
+
+INSERT INTO `poll_result` (`sr`, `psr`, `uid`, `selected`) VALUES
+(1, 16, 2, 'B'),
+(2, 17, 1, 'A'),
+(3, 14, 2, 'B'),
+(4, 19, 2, 'B'),
+(5, 20, 2, 'D'),
+(6, 19, 1, 'A'),
+(7, 20, 1, 'A'),
+(8, 16, 1, 'B'),
+(9, 14, 1, 'C'),
+(10, 21, 2, 'A'),
+(13, 23, 2, 'A'),
+(14, 23, 1, 'A');
 
 -- --------------------------------------------------------
 
@@ -152,15 +216,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `uid`, `texts`, `file`, `date_time`) VALUES
-(1, 2, 'good morning', '1586937962.jpg', '1586937962'),
-(2, 1, 'good afternoon', '1586937987.jpg', '1586937987'),
-(3, 4, 'good Evening', '1586938012.jpg', '1586938012'),
-(4, 3, 'good night', '1586939696.jpg', '1586939696'),
-(5, 2, 'Beauty Of nature', '1587791081.jpg', '1587791081'),
-(6, 2, 'Hiii', '1588240043.mp4', '1588240043'),
-(7, 2, '', '1588240129.mp4', '1588240129'),
-(8, 2, '', '1588240192.mp4', '1588240192'),
-(9, 2, '', '1588240270.mp4', '1588240270');
+(1, 2, 'gm', '1588775066.jpg', '1588775066'),
+(2, 2, 'GN', '1588776149.jpg', '1588776149'),
+(3, 2, 'GM frends', '1590331046.jpg', '1590331046');
 
 -- --------------------------------------------------------
 
@@ -275,6 +333,18 @@ ALTER TABLE `followers`
   ADD KEY `sr` (`sr`);
 
 --
+-- Indexes for table `poll`
+--
+ALTER TABLE `poll`
+  ADD KEY `sr` (`sr`);
+
+--
+-- Indexes for table `poll_result`
+--
+ALTER TABLE `poll_result`
+  ADD KEY `sr` (`sr`);
+
+--
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
@@ -301,7 +371,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `chat`
@@ -319,13 +389,25 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `followers`
 --
 ALTER TABLE `followers`
-  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `poll`
+--
+ALTER TABLE `poll`
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `poll_result`
+--
+ALTER TABLE `poll_result`
+  MODIFY `sr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
